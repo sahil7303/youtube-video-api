@@ -29,10 +29,8 @@ YOUTUBE_API_KEY=your_youtube_api_key_here
    ```bash
    npm install
    ```
-2. Start MongoDB:
-   ```bash
-   mongod
-   ```
+2. Ensure that your MongoDB server is running and accessible via the connection URI specified in the `.env` file. The application will automatically connect to MongoDB using Mongoose when you start the server.
+
 3. Start the server:
    ```bash
    node server.js
@@ -66,7 +64,7 @@ YOUTUBE_API_KEY=your_youtube_api_key_here
   - `query`: Search term for title or description.
 - **Example**:
   ```bash
-  curl "http://localhost:3000/videos/search?query=official"
+  curl "http://localhost:3000/videos/search?query=nodejs"
   ```
 
 ## Testing the API
@@ -78,4 +76,4 @@ YOUTUBE_API_KEY=your_youtube_api_key_here
 - Ensure the `.env` file contains valid values for `MONGO_URI` and `YOUTUBE_API_KEY`.
 
 ## License
-This project is for educational purposes only.
+This project is for assignment purpose only.
