@@ -10,7 +10,7 @@ export const fetchVideos = async () => {
     const response = await axios.get(YOUTUBE_API_URL, {
       params: {
         part: 'snippet',
-        q: 'reactjs', // Replace with your search query
+        q: 'reactjs', // Predefined search query
         type: 'video',
         order: 'date',
         maxResults: 10,
