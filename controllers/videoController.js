@@ -25,7 +25,10 @@ export const searchVideos = async (req, res) => {
     }
 
     const videos = await Video.find({
-      $text: { $search: query },
+      $or: [
+        { title: { $regex: query, $options: 'i' } },
+        { description: { $regex: query, $options: 'i' } },
+      ],
     });
 
     res.json(videos);
